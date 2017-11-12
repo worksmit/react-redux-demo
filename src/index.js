@@ -4,6 +4,7 @@ import App from './App';
 import About from './About';
 import UserPage from './UserPage';
 import Thanks from './Thanks';
+import Coverage from './Coverage';
 
 import './index.css';
 
@@ -36,7 +37,7 @@ ReactDOM.render((
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/user-page">Form Page</Link></li>
-       
+        <li><Link to="/coverage">Coverage Page</Link></li>
       </ul>
 
       <hr/>
@@ -45,6 +46,7 @@ ReactDOM.render((
       <Route path="/about" component={About}/>
       <Route path="/thanks" component={Thanks}/>
       <Route path="/user-page" component={UserPage}/>
+      <Route path="/coverage" component={Coverage}/>
      
     </div>
   </Router>

@@ -8,7 +8,19 @@ import { reducer as formReducer } from 'redux-form';
 
 import thunk from 'redux-thunk';
 
+
+
+
 // actions.js
+
+export const saveCoverage = cover => ({
+    type: 'SAVE_COVERAGE',
+    cover,
+});
+
+
+
+
 export const activateGeod = geod => ({
     type: 'ACTIVATE_GEOD',
     geod,
@@ -22,7 +34,7 @@ export const closeGeod = () => ({
 export const geod = (state = {}, action) => {
     switch (action.type) {
         case 'ACTIVATE_GEOD':
-            return action.geod;
+            return action.geod;   
         case 'CLOSE_GEOD':
             return {};
         default:
@@ -30,8 +42,20 @@ export const geod = (state = {}, action) => {
     }
 };
 
+export const cover = (state = {}, action) => {
+    switch (action.type) {
+        
+        case 'SAVE_COVERAGE':
+            return action.cover;    
+       
+        default:
+            return state;
+    }
+};
+
 export const reducers = combineReducers({
     geod,
+    cover,
     form:formReducer
 });
 

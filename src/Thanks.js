@@ -14,6 +14,7 @@ export class Thanks extends Component {
   get values() {
     
     const state = store.getState()
+    console.log('state',state)
     // Get the form values using the redux-forms formValueSelector  function
     
 //Method 1 to get form values: using formValueSelector. We can fetch form values heere because I have set destroyOnUnmount to false in UserForm.js .
@@ -24,11 +25,14 @@ console.log(selector(state, 'email'));
 
 //Method 2: using getFormValues. We can fetch form values heere because I have set destroyOnUnmount to false in UserForm.js .
 
-    return getFormValues('contact')(state);
+    //return getFormValues('coverage')(state);
+    return state;
+   
   }
 
     render() {
-    	const formValues = this.values
+        const formValues = this.values
+        console.log('values',this.values)
         return (
             <div>
 
