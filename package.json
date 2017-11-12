@@ -13,6 +13,7 @@
     "redux-form": "^7.1.0",
     "redux-thunk": "^2.2.0"
   },
+  "homepage": "https://github.com/aquasmit/react-redux-simple-app.git",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
